@@ -1,13 +1,12 @@
 <?php
 
-function view($viewPath, $data = []) {
-    $filePath = str_replace('.', '/', $viewPath) . '.php';
-    $fullPath = str_replace('\\', '/', PATH_VIEWS . $filePath);
-    //var_dump($filePath, file_exists($fullPath));
-    if (!file_exists($fullPath)) {
-        throw new Exception("View $fullPath does not exist");
-    }
+use app\classes\Engine;
 
-    extract($data);
-    return require $fullPath;
+function view(string $view, array $data = []): false|string {
+    try {
+        $engine = new Engine();
+        echo $engine->render($view, $data);
+    } catch (Throwable $throwable) {
+        var_dump($throwable->getMessage());
+    }
 }

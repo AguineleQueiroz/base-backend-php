@@ -1,0 +1,23 @@
+footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    place-items: center;
+    background: #4F5B93;
+    color: #f6f6f6;
+    padding: .85rem 4rem;
+    grid-gap: 32px;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+    text-align: end;
+}
+
+@media screen and (max-width: 992px) {
+    footer {
+        padding: .85rem 1rem;
+    }
+}

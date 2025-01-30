@@ -1,0 +1,15 @@
+{
+  "name": "base-backend-php",
+  "version": "1.0.0",
+  "description": "Boilerplate robusto para desenvolvimento de aplicações PHP, oferecendo uma estrutura modular, escalável e preparada para produção. Inclui arquitetura MVC, configurações essenciais e práticas recomendadas para projetos PHP modernos.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,14 +1,17 @@
 <?php
 
 namespace app\controllers;
+
 use Exception;
 
-class PublicController
+class ExampleController
 {
     /**
      * @throws Exception
      */
     public function home() {
-        return view('base', ['title' => 'teste']);
+        return view('home', [
+            'title' => 'Home'
+        ]);
     }
 }

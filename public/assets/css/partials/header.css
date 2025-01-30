@@ -1,0 +1,29 @@
+.header-container {
+    display: grid;
+    grid-template-columns: auto 1fr !important;
+    justify-content: space-between;
+    align-items: center;
+    background: #4F5B93;
+    color: #f6f6f6;
+    font-weight: 500;
+    padding: .85rem 4rem;
+}
+
+div {
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: end;
+}
+nav ul li {
+    display: inline;
+    margin-left: 32px;
+}
+
+@media screen and (max-width: 992px) {
+    .header-container {
+        padding: .85rem 1rem;
+    }
+}

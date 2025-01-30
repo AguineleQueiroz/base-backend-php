@@ -1,0 +1,1 @@
+<!-- include all scripts of the app here -->

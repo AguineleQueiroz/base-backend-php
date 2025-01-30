@@ -12,11 +12,17 @@
             "app\\": "app"
         }
     },
+    "scripts": {
+        "server": "php -S localhost:8000 -t public"
+    },
     "authors": [
         {
             "name": "AguineleQueiroz",
             "email": "aguinelequeiroz@outlook.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "config": {
+        "process-timeout": 0
+    }
 }
