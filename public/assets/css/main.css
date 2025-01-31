@@ -9,6 +9,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    background: #e8e8e8;
+    width: 7px;
+    border-left: 1px solid #4F5B93;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4F5B93;
+}
+
+
 /* Document */
 html {
     font-size: 16px;
@@ -97,16 +109,46 @@ table {
 }
 
 /* main configs */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+    min-height: 100dvh;
+    width: 100%;
+}
+
+.divide {
+    grid-template-columns: auto 1fr;
+}
+
+.main-content {
+    width: 100%;
+    max-height: 100dvh;
+    overflow-y: auto;
+}
 
 .content-container {
-    display: grid;
-    grid-template-columns: minmax(378px, 1200px) 1fr;
-    padding: 0 4rem;
-    min-height: 100dvh;
+    padding: 0 2rem;
 }
 
 @media screen and (max-width: 992px) {
     .content-container {
         padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .divide {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        position: relative;
+        top: 9dvh;
     }
 }

@@ -1,0 +1,13 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    color: #c6c6c6;
+    padding: .85rem 4rem;
+}
+
+@media screen and (max-width: 992px) {
+    footer {
+        padding: .85rem 1rem;
+    }
+}
