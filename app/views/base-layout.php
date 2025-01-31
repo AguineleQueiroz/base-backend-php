@@ -10,20 +10,24 @@
 
     <!-- styles -->
     <?php include 'layout/styles.php'; ?>
-    <?php include 'layout/scripts.php'; ?>
     <!-- scripts -->
 
 </head>
-<body>
+<body class="divide">
     <?php include 'partials/header.php'; ?>
-    <main class="content-container">
-        <!-- partials contents -->
-        <?php
-            echo $this->loadContent();
-        ?>
-    </main>
-    <?php include 'partials/footer.php'; ?>
-
+    <div class="main-content">
+        <main>
+            <?php include 'partials/header-logged.php'; ?>
+            <!-- partials contents -->
+            <div class="content-container content">
+                <?php
+                    echo $this->loadContent();
+                ?>
+            </div>
+        </main>
+        <?php include 'partials/footer-default.php'; ?>
+    </div>
     <!-- scripts -->
+    <?php include 'layout/scripts.php'; ?>
 </body>
 </html>

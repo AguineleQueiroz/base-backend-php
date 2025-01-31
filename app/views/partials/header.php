@@ -1,5 +1,5 @@
-<header class="header-container">
-    <span>Logo</span>
+<header class="header-container active">
+    <div class="logo">LOGO</div>
     <nav>
         <ul>
             <li>Who are us</li>
