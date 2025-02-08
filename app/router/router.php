@@ -1,15 +1,11 @@
 <?php
 
-function routes(): mixed {
-    return require 'routes.php';
-}
-
 /**
  * @throws Exception
  */
 function router() {
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    $routes = routes();
+    $routes = require 'routes.php';
     $matched_uri = exactMatchUriFromArrayRoutes($uri, $routes);
     $params_formatted = [];
     if(empty($matched_uri)) {
@@ -46,10 +42,7 @@ function formatParameters(array $uri, array $params): array {
 }
 
 function exactMatchUriFromArrayRoutes(string $uri, array $routes): array {
-    if(array_key_exists($uri, $routes)) {
-        return [ $uri => $routes[$uri]];
-    }
-    return [];
+    return array_key_exists($uri, $routes) ? [ $uri => $routes[$uri]]: [];
 }
 
 function regexMatchArrRoutes(string $uri, array $routes): array {
@@ -59,5 +52,6 @@ function regexMatchArrRoutes(string $uri, array $routes): array {
             $regex = str_replace('/', '\/', ltrim($route, '/'));
             return preg_match("/^$regex$/", ltrim($uri, '/'));
         },
-        ARRAY_FILTER_USE_KEY);
+        ARRAY_FILTER_USE_KEY
+    );
 }
