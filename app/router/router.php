@@ -6,10 +6,11 @@
 function router() {
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $routes = require 'routes.php';
-    $matched_uri = exactMatchUriFromArrayRoutes($uri, $routes);
+    $requestMethod = $_SERVER['REQUEST_METHOD'];
+    $matched_uri = exactMatchUriFromArrayRoutes($uri, $routes[$requestMethod]);
     $params_formatted = [];
     if(empty($matched_uri)) {
-        $matched_uri = regexMatchArrRoutes($uri, $routes);
+        $matched_uri = regexMatchArrRoutes($uri, $routes[$requestMethod]);
         $uri_components = explode('/', ltrim($uri, '/'));
         $params = params($uri_components, $matched_uri);
         $params_formatted = formatParameters($uri_components, $params);
