@@ -3,9 +3,15 @@
     "description": "php application boilerplate",
     "autoload": {
         "files": [
+            "app/database/connect.php",
+            "app/database/fetch.php",
+
             "app/helpers/constants.php",
             "app/helpers/helpers.php",
+            "app/helpers/redirect.php",
+
             "app/router/router.php",
+
             "app/controllers/Controller.php"
         ],
         "psr-4": {
@@ -21,7 +27,9 @@
             "email": "aguinelequeiroz@outlook.com"
         }
     ],
-    "require": {},
+    "require": {
+      "ext-pdo": "*"
+    },
     "config": {
         "process-timeout": 0
     }
