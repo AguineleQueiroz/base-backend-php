@@ -1,0 +1,66 @@
+@import "../reset.css";
+
+.lg-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    min-width: 100dvw;
+    min-height: 100dvh;
+}
+
+.lg-content,
+.lg-email-container,
+.lg-password-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.lg-password-container {
+    margin-top: 10px;
+}
+
+.lg-content {
+    min-width: 22rem;
+}
+
+.lg-logo {
+    margin: 0 auto 25px auto;
+}
+
+.lg-title {
+    text-align: center;
+    color: #4F5B93;
+    font-weight: 500;
+}
+
+.lg-form {
+    padding: 25px 0;
+}
+
+.lg-btn-signin {
+    background: #4F5B93;
+    border: 1px solid #4F5B93;
+    padding: 5px;
+    width: 100%;
+    border-radius: 3px;
+    color: white;
+}
+
+.lg-btn-signin:hover {
+    background: #414d82;
+}
+
+.lg-forgot-pswd-container {
+    text-align: end;
+    margin-bottom: 15px;
+}
+
+.lg-forgot-pswd-link,
+.lg-signup-link {
+    text-decoration: underline;
+}
+
+.lg-forgot-pswd-link:hover,
+.lg-signup-link:hover {
+    color: #414d82;
+}

@@ -5,10 +5,12 @@
         "files": [
             "app/database/connect.php",
             "app/database/fetch.php",
+            "app/database/user/methods.php",
 
             "app/helpers/constants.php",
             "app/helpers/helpers.php",
             "app/helpers/redirect.php",
+            "app/helpers/flashmsg.php",
 
             "app/router/router.php",
 

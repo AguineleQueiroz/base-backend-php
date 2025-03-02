@@ -16,5 +16,9 @@ function controller($matchedUri, $params) {
         throw new Exception("Action $action does not exist in $controller class");
     }
 
-    return $controllerInstance->$action($params);
+    $controller = $controllerInstance->$action($params);
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        die();
+    }
+    return $controller;
 }

@@ -1,5 +1,6 @@
 <?php
 
-function redirect($location) {
+function redirect($location): bool {
     header('Location: ' . $location);
+    return true;
 }
