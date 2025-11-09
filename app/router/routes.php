@@ -3,14 +3,20 @@
     return [
 
         'POST' => [
-            '/login' => 'auth\LoginController@store',
+            '/login' => 'auth\AuthController@store',
         ],
         'GET' => [
             '/' => 'ExampleController@home',
-            '/login' => 'auth\LoginController@login',
+            '/login' => 'auth\AuthController@login',
+            '/logout' => 'auth\AuthController@logout',
+
             '/user/profile' => 'ExampleController@profile',
-            '/user/create' => 'ExampleController@create',
+
             '/user/[0-9]+' => 'ExampleController@show',
+            '/user/create' => 'ExampleController@create',
+            '/user/[0-9]+/edit' => 'ExampleController@edit',
+            '/user/[0-9]+/delete' => 'ExampleController@destroy',
+
         ],
         'PUT' => [
 

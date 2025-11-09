@@ -9,7 +9,7 @@ class ExampleController
     /**
      * @throws Exception
      */
-    public function home() {
+    public function home(): false|string {
         $users = all('users');
 
         return view('home', [
@@ -18,7 +18,7 @@ class ExampleController
         ]);
     }
 
-    public function show($params) {
+    public function show($params): false|string {
         if(!isset($params['user'])) {
             redirect('/');
         }

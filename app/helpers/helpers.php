@@ -2,6 +2,9 @@
 
 use app\classes\Engine;
 
+/**
+ * @throws Throwable
+ */
 function view(string $view, array $data = []): false|string {
     try {
         $engine = new Engine();
